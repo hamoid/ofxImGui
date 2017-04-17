@@ -128,7 +128,7 @@ namespace ofxImGui
 		ImGuiIO& io = ImGui::GetIO();
 
 		float currentTime = ofGetElapsedTimef();
-		if (lastTime > 0.f)
+		if (currentTime > lastTime)
 		{
 			io.DeltaTime = currentTime - lastTime;
 		}
