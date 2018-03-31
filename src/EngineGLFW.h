@@ -1,6 +1,7 @@
 #pragma once
 
 #include "ofConstants.h"
+#include "GLFW/glfw3.h"
 #if !defined(TARGET_OPENGLES)
 
 #include "BaseEngine.h"
@@ -10,7 +11,7 @@
 
 namespace ofxImGui
 {
-	class EngineGLFW 
+	class EngineGLFW
 		: public BaseEngine
 	{
 	public:
@@ -31,7 +32,7 @@ namespace ofxImGui
 		void onKeyPressed(ofKeyEventArgs& event) override;
 		void onMousePressed(ofMouseEventArgs& event) override;
 
-		// Custom 
+		// Custom
 		static void programmableRenderDrawLists(ImDrawData * draw_data);
 		static void fixedRenderDrawLists(ImDrawData * draw_data);
 
